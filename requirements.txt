@@ -1,0 +1,15 @@
+deepface==0.0.93
+huggingface-hub==0.28.1
+kaggle==1.6.17
+kagglehub==0.3.10
+matplotlib==3.10.0
+numpy==1.26.4
+torch==2.3.0
+torchvision==0.18.0
+torchaudio==2.3.0
+opencv-python==4.11.0.86
+pillow==11.1.0
+tqdm==4.67.1
+pandas==1.3.5
+transformers==4.12.2
+streamlit==1.43.1
