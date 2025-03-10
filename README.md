@@ -40,8 +40,8 @@ http://localhost:8501
 
 ## Training Results
 
-[loss Image](path_to_example_result_image.png)
-[arrucacy Image](path_to_example_result_image.png)
+![loss Image](https://github.com/JasonTaoY/smile_classification/blob/main/assets/loss_matrix.png)
+![arrucacy Image](https://github.com/JasonTaoY/smile_classification/blob/main/assets/confusion_matrix.png)
 
 ## Usage
 
@@ -51,7 +51,7 @@ http://localhost:8501
 
 ## Example
 
-![Example Image](path_to_example_result_image.png)
+![Example Image](https://github.com/JasonTaoY/smile_classification/blob/main/assets/Aaron_Eckhart_0001.jpg)
 
 ## Model Weights
 
