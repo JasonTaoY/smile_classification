@@ -2,11 +2,13 @@
 
 This repository contains a simple Streamlit-based application that classifies whether a person in an uploaded image is smiling or not. The model used is a fine-tuned ResNet50 trained for binary classification (Smile vs. No Smile).
 
+This project train the model using few labeled data and use the transfer learning and active learning to improve the model performance. The model is trained on the dataset from [here](https://www.kaggle.com/datasets/atulanandjha/lfwpeople?resource=download), which contains images of faces of various celebrities.
+
 ## Features
 
 - Upload and classify images directly in the browser.
 - Easy-to-use interactive interface provided by Streamlit.
-- Uses a pre-trained ResNet50 model hosted on Hugging Face.
+- Train the model using few labeled data and use the transfer learning and active learning to improve the model performance.
 
 ## Getting Started
 
@@ -23,8 +25,9 @@ pip install -r requirements.txt
 Run the Streamlit application with the following command:
 
 ```bash
-streamlit run face_smile_classifier.py
+streamlit run web/layout.py
 ```
+You could download the model weights from [here](https://huggingface.co/NEWKUN/smile_classification) and put it in the root.
 
 Then, open the URL displayed in your terminal, typically:
 
