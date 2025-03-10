@@ -40,14 +40,8 @@ http://localhost:8501
 
 ## Training Results
 
-The model achieved high accuracy and a stable loss curve. The detailed metrics:
-
-| Metric           | Score       |
-|------------------|-------------|
-| Training Loss    | [Insert Loss Curve Image Here] |
-| Validation Accuracy | [Insert Accuracy Image Here] |
-
-*(Replace placeholders above with your actual metrics images.)*
+[loss Image](path_to_example_result_image.png)
+[arrucacy Image](path_to_example_result_image.png)
 
 ## Usage
 
@@ -64,10 +58,8 @@ The model achieved high accuracy and a stable loss curve. The detailed metrics:
 Model weights are hosted on Hugging Face. Ensure you update the URL in the code:
 
 ```python
-'https://huggingface.co/yourusername/yourmodelname/resolve/main/model_final.pth'
+'https://huggingface.co/NEWKUN/smile_classification'
 ```
-
-Replace `yourusername` and `yourmodelname` with your actual Hugging Face repository details.
 
 ---
 
