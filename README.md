@@ -15,7 +15,7 @@ This repository contains a simple Streamlit-based application that classifies wh
 Ensure you have Python installed. Then, install the dependencies:
 
 ```bash
-pip install streamlit torch torchvision pillow
+pip install -r requirements.txt
 ```
 
 ### Running the App
