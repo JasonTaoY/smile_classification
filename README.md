@@ -66,4 +66,6 @@ Model weights are hosted on Hugging Face. Ensure you update the URL in the code:
 
 ---
 
+If you want to fine-tune the model on your own dataset, you could add the dataset in the data/dataset folder.
+
 Enjoy classifying smiles!

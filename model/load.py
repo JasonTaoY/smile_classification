@@ -3,7 +3,7 @@ import torch.optim as optim
 import torchvision.models as models
 
 
-def initialize_model(num_classes=2, pretrained=True, device='gpu'):
+def initialize_model(num_classes=2, pretrained=True, device='cuda'):
     model = models.resnet50(pretrained=pretrained)
     in_features = model.fc.in_features
     model.fc = nn.Linear(in_features, num_classes)

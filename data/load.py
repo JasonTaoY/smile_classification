@@ -41,7 +41,7 @@ def init_dataloader(image_paths, labels, transform, batch_size=32, shuffle=True)
     return dataloader
 
 
-def get_deepface_pred(image_path):
+def pred_by_deepface(image_path):
     analysis = DeepFace.analyze(image_path, actions=['emotion'], enforce_detection=False)
     emotion = analysis[0]['dominant_emotion']
     prob = analysis[0]['emotion']['happy']
@@ -55,12 +55,17 @@ def create_deepface_pred(image_paths):
     non_labelled_image_deepface = {}
     from tqdm import tqdm
     for path in tqdm(image_paths):
-        label, prod = get_deepface_pred(path)
+        label, prod = pred_by_deepface(path)
         non_labelled_image_deepface[path] = [label, prod]
     with open("/dataset/deepface_label.json", "w", encoding="utf-8") as json_file:
         json.dump(non_labelled_image_deepface, json_file, ensure_ascii=False, indent=4)
     return non_labelled_image_deepface
 
+
+def get_deepface_pred():
+    current_path = Path().resolve()
+    with open(current_path / "dataset" / "deepface_label.json", "r", encoding="utf-8") as json_file:
+        non_labelled_image_deepface = json.load(json_file)
 
 def get_data():
     current_path = Path().resolve()
@@ -70,7 +75,7 @@ def get_data():
                    os.path.isdir(os.path.join(base_dir, person))]
     train_folders = list(sorted(all_folders))[:-75]
     test_folders = list(sorted(all_folders))[-75:]
-    label = open(current_path / "dataset" / "label.txt", "r").read().splitlines()
+    label = open(current_path / "data" /"dataset" / "label.txt", "r").read().splitlines()
     label = list(map(int, label))
     non_labelled_image = []
     labelled_image = []
